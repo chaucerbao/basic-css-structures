@@ -13,6 +13,18 @@
     "last 1 version",
     "> 0.2%"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.scss": [
+      "prettier --write",
+      "stylelint --fix",
+      "git add"
+    ]
+  },
   "postcss": {
     "plugins": {
       "autoprefixer": true
@@ -37,6 +49,8 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.1.5",
+    "husky": "^1.0.0-rc.15",
+    "lint-staged": "^7.3.0",
     "node-sass": "^4.9.3",
     "parcel-bundler": "^1.9.7",
     "prettier": "^1.14.3",
