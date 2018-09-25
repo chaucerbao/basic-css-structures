@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./style.scss">
   </head>
 
-  <body>
+  <body class="on-white">
     <header class="site-width pad">
       <h1 class="heading-1">Basic CSS Structures</h1>
     </header>
@@ -30,7 +30,7 @@
       </div>
     </section>
 
-    <section class="on-white">
+    <section>
       <div class="site-width site-width--narrow pad center">
         <h2 class="heading-2">Narrow Width with Centered Text</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, <a href="#">sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -42,29 +42,29 @@
         <h2 class="heading-2">Lists</h2>
         <ol>
           <li>List item 1</li>
-          <li>List item 2</li>
+          <li>List item 2(<a href="#">Link</a>)</li>
           <li>List item 3</li>
         </ol>
 
         <ul>
           <li>List item 1</li>
-          <li>List item 2</li>
+          <li>List item 2(<a href="#">Link</a>)</li>
           <li>List item 3</li>
         </ul>
       </div>
     </section>
 
-    <section class="on-white">
+    <section>
       <form class="site-width pad" action="#">
         <h2 class="heading-2">Forms</h2>
-        <p>Interactive elements remain accessible</p>
+        <p>Interactive elements remain accessible. Layout should be implemented with CSS grid.</p>
         <select>
           <option>Option 1</option>
           <option>Option 2</option>
           <option>Option 3</option>
         </select>
 
-        <input type="text" placeholder="Placeholder" />
+        <input value="Text in a box" type="text" placeholder="Placeholder" />
 
         <textarea placeholder="Placeholder"></textarea>
 
@@ -79,10 +79,11 @@
         </div>
 
         <div class="pad pad--top">
-          <input class="button" value="Submit" type="submit" />
+          <input class="button" value="Input" type="submit" />
           <button class="button">Button</button>
-          <a class="button" href="#">Cancel</a>
-          <button class="button" disabled>Disabled</button>
+          <a class="button" href="#">Link</a>
+          <input disabled class="button" value="Disabled Input" type="submit" />
+          <button disabled class="button">Disabled Button</button>
         </div>
       </form>
     </section>
