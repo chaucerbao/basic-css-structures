@@ -1,0 +1,36 @@
+%button {
+  appearance: none;
+  transition: background 0.15s, color 0.15s;
+  border: none;
+  background: $blue;
+  cursor: pointer;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: $gray-5;
+
+  &:not(:disabled) {
+    &:hover {
+      background: $aqua;
+      text-decoration: none;
+      color: $gray-1;
+    }
+
+    &:active {
+      background: darken($aqua, 20%);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:focus {
+    @include focus-ring;
+  }
+}
+
+.button {
+  @extend %button;
+}

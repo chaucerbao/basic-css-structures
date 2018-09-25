@@ -1,0 +1,78 @@
+input[type='text'],
+select,
+textarea {
+  appearance: none;
+  border: 1px solid $gray-3;
+  border-radius: 0;
+  background: $white;
+  padding: 5px 10px;
+  width: 100%;
+
+  &:focus {
+    @include focus-ring;
+  }
+}
+
+select {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>')
+    calc(100% - 10px) center / 10px auto no-repeat;
+  padding-right: 30px;
+}
+
+.checkbox,
+.radio {
+  > input {
+    position: absolute;
+    opacity: 0;
+
+    &:focus ~ span::before {
+      @include focus-ring;
+    }
+
+    &:checked ~ span::after {
+      transform: scale(1);
+    }
+  }
+
+  > span {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    &::before {
+      display: inline-block;
+      margin-right: 10px;
+      border: 1px solid $gray-3;
+      background: $white;
+      width: 14px;
+      height: 14px;
+      content: '';
+    }
+
+    &::after {
+      position: absolute;
+      top: calc(50% - 4px);
+      left: 3px;
+      transform: scale(0);
+      transition: transform 0.15s;
+      background: $blue;
+      width: 8px;
+      height: 8px;
+      content: '';
+    }
+  }
+}
+
+.radio {
+  > input {
+    &:checked ~ span::after {
+      border-radius: 50%;
+    }
+  }
+
+  > span {
+    &::before {
+      border-radius: 50%;
+    }
+  }
+}

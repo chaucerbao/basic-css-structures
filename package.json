@@ -1,0 +1,46 @@
+{
+  "name": "basic-css-structures",
+  "version": "0.1.0",
+  "description": "A starting point for organizing CSS",
+  "keywords": [
+    "css",
+    "utility",
+    "classes"
+  ],
+  "author": "Alvin Chan <no@email.com>",
+  "license": "ISC",
+  "browserslist": [
+    "last 1 version",
+    "> 0.2%"
+  ],
+  "postcss": {
+    "plugins": {
+      "autoprefixer": true
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-concentric-order",
+      "stylelint-config-prettier"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.9.7",
+    "prettier": "^1.14.3",
+    "shx": "^0.3.2",
+    "stylelint": "^9.5.0",
+    "stylelint-config-concentric-order": "^3.4.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-standard": "^18.2.0"
+  },
+  "scripts": {
+    "start": "shx rm -rf dist && parcel src/index.html",
+    "build": "shx rm -rf dist && parcel build src/index.html"
+  }
+}

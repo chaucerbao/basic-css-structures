@@ -1,0 +1,17 @@
+.on-white {
+  background: $white;
+  color: $black;
+
+  a:not(.button) {
+    color: $teal;
+  }
+}
+
+.on-gray {
+  background-color: $gray-5;
+  color: $gray-2;
+
+  a:not(.button) {
+    color: $blue;
+  }
+}

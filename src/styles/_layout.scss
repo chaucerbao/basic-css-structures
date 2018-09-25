@@ -1,0 +1,39 @@
+.site-width {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 768px;
+}
+
+.site-width--narrow {
+  max-width: 640px;
+}
+
+.site-width--wide {
+  max-width: 1024px;
+}
+
+.pad {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.pad--small {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pad--top {
+  padding-bottom: 0;
+}
+
+.pad--bottom {
+  padding-top: 0;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

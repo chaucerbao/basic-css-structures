@@ -1,0 +1,23 @@
+@import url('https://unpkg.com/normalize.css@8.0.0/normalize.css');
+
+// Global
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// Setup
+@import 'styles/config';
+@import 'styles/mixins';
+
+// Partials
+@import 'styles/buttons';
+@import 'styles/colors';
+@import 'styles/forms';
+@import 'styles/layout';
+@import 'styles/typography';
